@@ -4,9 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#000000">
+    <meta name="msapplication-navbutton-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate">
+    <meta name="description" content="My awesome PWA">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Add the following meta tag for the Vibration API -->
+    <meta name="mobile-web-app-capable" content="yes">
     <title>Document</title>
 </head>
 <body>
-    
+    <button onclick="vibrate()">Vibrate</button>
 </body>
+    <script>
+function vibrate() {
+  // Check if the browser supports the Vibration API
+  if ("vibrate" in navigator) {
+    // Vibrate for 100 milliseconds
+    navigator.vibrate(100);
+  } else {
+    console.log("Vibration not supported");
+  }
+}
+</script>
 </html>
